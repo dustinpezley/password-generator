@@ -72,69 +72,6 @@ function generatePassword() {
   return passwordChar.join('');
 }
 
-// Character code-generating function, might be good to remember
-// Adapted from https://www.studytonight.com/post/building-a-password-generator-with-javascript
-// let arrayFromLowToHigh = (low, high) => {
-//   const array = [];
-//   for (let i = low; i <= high; i++) {
-//     array.push(i);
-//   }
-//   return array;
-// }
-
-// const UPPERCASE_CODES = arrayFromLowToHigh(65, 90);
-// const LOWERCASE_CODES = arrayFromLowToHigh(97, 122);
-// const NUMBER_CODES = arrayFromLowToHigh(48, 57);
-// const SYMBOL_CODES = arrayFromLowToHigh(33, 47)
-//   .concat(arrayFromLowToHigh(58, 64))
-//   .concat(arrayFromLowToHigh(91, 96))
-//   .concat(arrayFromLowToHigh(123, 126));
-
-// function generatePassword() {
-//   var characterAmount = prompt("Your password must be between 8-128 characters. How many characters would you like to use?", "12");
-
-//   // If password falls outside of length requirements, keep asking.
-//   while(characterAmount <= 7 || characterAmount >= 129) {
-//     alert("Please select a number between 8-128 characters.");
-//     var characterAmount = prompt("Your password must be between 8-128 characters. How many characters would you like to use?", "12");
-//   }
-
-//   // If no characters sets have been selected, remind user that a strong password uses multiple character sets.
-//   while(!includeSymbols && !includeNumbers && !includeLowercase && !includeUppercase) {
-//     alert("The more varied your password is, the stronger it will be. On the next few screens, please select what characters you would like to use in your password.");
-//     var includeSymbols = confirm("Woudl you like to use special characters: !#$%'()*+,-./:;<?@[\\]^_`{|}~? Please use OK to confirm or cancel to decline.");
-//       if(includeSymbols) {
-//         alert("Special characters will be used in criteria for password generation.");
-//       }
-//     var includeNumbers = confirm("Would you like to use numbers: 0123456789? Please use OK to confirm or cancel to decline.");
-//       if (includeNumbers) {
-//         alert("Numbers will be used in criteria for password generation.");
-//       }
-//     var includeLowercase = confirm("Would you like to use lowercase letters: abcdefghijklmnopqrstuvwxyz? Please use OK to confirm or cancel to decline.");
-//       if (includeLowercase) {
-//         alert("Lowercase letters will be used in criteria for password generation.");
-//       }
-//     var includeUppercase = confirm("Would you like to use uppercase letters: ABCDEFGHIJKLMNOPQRSTUVWXYZ? Please use OK to confirm or cancel to decline.");
-//       if (includeUppercase) {
-//         alert("Uppercase letters will be used in criteria for password generation.");
-//       }
-//   }
-
-//   let charCodes = "";
-//   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CODES);
-//   if (includeNumbers) charCodes = charCodes.concat(NUMBER_CODES);
-//   if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CODES);
-//   if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CODES);
-//   const passwordCharacters = [];
-//   for (let i = 0; i > characterAmount; i++) {
-//     const characterCode = 
-//       charCodes[Math.floor(Math.random() * charCodes.length)];
-//     passwordCharacters.push(String.fromCharCode(characterCode));
-//   }
-//   return passwordCharacters.join('');
-// }
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
