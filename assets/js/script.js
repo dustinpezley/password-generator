@@ -29,22 +29,14 @@ function generatePassword() {
   // If no characters sets have been selected, remind user that a strong password uses multiple character sets.
   while(!confirmSpecialChar && !confirmNum && !confirmAlphaLow && !confirmAlphaUpp) {
     alert("The more varied your password is, the stronger it will be. On the next few screens, please select what characters you would like to use in your password.");
-    var confirmSpecialChar = confirm("Woudl you like to use special characters: !#$%'()*+,-./:;<?@[\\]^_`{|}~? Please use OK to confirm or cancel to decline.");
-      if(confirmSpecialChar) {
-        alert("Special characters will be used in criteria for password generation.");
-      }
+    var confirmSpecialChar = confirm("Would you like to use special characters: !#$%'()*+,-./:;<?@[\\]^_`{|}~? Please use OK to confirm or cancel to decline.");
+
     var confirmNum = confirm("Would you like to use numbers: 0123456789? Please use OK to confirm or cancel to decline.");
-      if (confirmNum) {
-        alert("Numbers will be used in criteria for password generation.");
-      }
+
     var confirmAlphaLow = confirm("Would you like to use lowercase letters: abcdefghijklmnopqrstuvwxyz? Please use OK to confirm or cancel to decline.");
-      if (confirmAlphaLow) {
-        alert("Lowercase letters will be used in criteria for password generation.");
-      }
+
     var confirmAlphaUpp = confirm("Would you like to use uppercase letters: ABCDEFGHIJKLMNOPQRSTUVWXYZ? Please use OK to confirm or cancel to decline.");
-      if (confirmAlphaUpp) {
-        alert("Uppercase letters will be used in criteria for password generation.");
-      }
+
   }
 
   // If special characters were selected, add them to the usedChar variable.
