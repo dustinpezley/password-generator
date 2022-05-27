@@ -81,8 +81,20 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// Copy password to clipboard
+var copyArea = document.querySelector("#password");
+
+function copyPassword(text) {
+  var text = document.querySelector("textarea");
+  navigator.clipboard.writeText(copyArea.value);
+
+  alert("Copied to clipboard!");
+}
+
+copyArea.addEventListener("click", copyPassword);
